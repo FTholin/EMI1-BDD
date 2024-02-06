@@ -96,29 +96,39 @@ SQLite est un choix populaire pour les bases de données dans les téléphones p
 Les bases de données relationnelles stockent les données dans des tables. Les tables peuvent devenir très grandes et comporter une multitude de colonnes et d'enregistrements. Les systèmes de gestion de bases de données relationnelles (SGBDR) utilisent SQL (et des variantes de SQL) pour gérer les données de ces grandes tables. Le SGBDR que vous utilisez est votre choix et dépend de la complexité de votre application.
 
 
-## Vue d'ensemble de SQL
+## Vue d'ensemble de SQL et le fonctionnement de l'éditeur
 
 SQL, **S**tructured **Q**uery **L**anguage, est un langage de programmation conçu pour gérer les données stockées dans des bases de données relationnelles. SQL fonctionne par le biais d'instructions simples et déclaratives. Cela permet de conserver des données précises et sécurisées, et de maintenir l'intégrité des bases de données, quelle que soit leur taille.
 
 Le langage SQL est largement utilisé aujourd'hui dans les framework Web et les applications de base de données. La connaissance de SQL vous donne la liberté d'explorer vos données et le pouvoir de prendre de meilleures décisions. En apprenant SQL, vous apprendrez également des concepts qui s'appliquent à presque tous les systèmes de stockage de données.
 
-### À vous de jouer ! 🤠
+
+Pour utiliser le site [SQLiteOnline.com](https://sqliteonline.com), suivez ces étapes de base pour commencer avec PostgreSQL en ligne :
+
+1. **Accès au site** : Ouvrez votre navigateur et allez à l'adresse [https://sqliteonline.com](https://sqliteonline.com).
+
+2. **Sélection de la base de données** : Une fois sur le site, vous verrez une interface avec différentes options pour choisir le type de base de données. Pour PostgreSQL, assurez-vous que "PostgreSQL" est sélectionné.
 
 
-0. [Suivre ce tutoriel pour lancer et utiliser Postgre et pgAdmin](./tutoriel_postgresql.md)
+4. **Utilisation de l'éditeur SQL** :
+   - Dans la zone de texte prévue à cet effet, vous pouvez écrire vos requêtes SQL. Par exemple, pour créer une nouvelle table, vous pouvez utiliser une commande comme `CREATE TABLE nom_de_la_table (colonne1 TYPE, colonne2 TYPE);`.
+   - Après avoir saisi votre requête, cliquez sur "Run SQL" (Exécuter SQL) pour exécuter la commande. Le résultat s'affichera dans la partie inférieure de la fenêtre.
+
+5. **Visualisation des données** :
+   - Les tables de votre base de données sont listées sur le côté gauche de l'écran. En cliquant sur une table, vous pouvez visualiser son contenu.
+   - Vous pouvez également effectuer des modifications directes sur les données en utilisant l'interface graphique, en plus d'utiliser des requêtes SQL.
+
+6. **Exportation et sauvegarde de la base de données** :
+   - Une fois que vous avez fini de travailler avec votre base de données, vous pouvez l'exporter en cliquant sur "Download DB" (Télécharger la base de données) pour sauvegarder votre travail sur votre appareil.
+
+7. **Fonctions supplémentaires** :
+   - Le site propose également des fonctionnalités supplémentaires comme la possibilité d'ajouter plusieurs utilisateurs pour travailler sur la même base de données, la coloration syntaxique pour faciliter la lecture des requêtes, et un historique des requêtes exécutées.
 
 
-1. Démarrer Posgres
-
-2. Lancez `pgAdmin4`.
-
-3. Créez une base de données `seance_1`
-
-4. Utiliser Query Tool (l'éditeur de requête pour créer et utiliser votre première base de données)
-![pgadmin](./ressources/pgadmin.png)
+## À vous de jouer ! 🤠
 
 
-3. Copier-Coller le code suivant dans l'éditeur de requêtes.
+1. Copier-Coller le code suivant dans l'éditeur de requêtes.
 ```sql
 CREATE TABLE personnes (
    nom TEXT,
@@ -135,14 +145,14 @@ INSERT INTO personnes (nom, age, pays)
 VALUES ('Pablo', 8, 'Espagne');
 ```
 
-4. Exécutez le code.
+2. Exécutez le code.
 
-5. Supprimer ce qu'il y a dans l'éditeur, et  Copiez-Collez et exécutez le code suivant:
+3. Supprimer ce qu'il y a dans l'éditeur, et  Copiez-Collez et exécutez le code suivant:
 ```sql
 SELECT * FROM personnes;
 ```
 
-6. Si tout ok, vous devriez avoir le résultat suivant:
+4. Si tout ok, vous devriez avoir le résultat suivant:
 
 ![console](./ressources/console.png)
 
