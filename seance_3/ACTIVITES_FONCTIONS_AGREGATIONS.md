@@ -124,7 +124,6 @@ FROM applications;
 ```
 La fonction `AVG()` fonctionne en prenant le nom d'une colonne comme argument et renvoie la valeur moyenne de cette colonne.
 
-On peut également rajouter à la fonction `AVG`  `::numeric(10,2)` pour avoir une sortie plus lisible.
 
 ### A vous de jouer !
 
@@ -180,9 +179,6 @@ FROM applications;
     ```
 
     Modifions maintenant cette requête pour qu'elle arrondisse ce résultat à deux décimales.
-
-    Veillez à entourer AVG(prix) par `AVG(prix)::numeric(10,2)` pour que ROUND puisse correctement s'executer.
-
 
 
 ## GROUPBY I
@@ -288,7 +284,7 @@ Ici, le 1 fait référence à la première colonne de notre instruction `SELECT,
 ```sql
 SELECT categorie, 
    prix,
-   AVG(telechargements)::numeric(10,2)
+   AVG(telechargements)
 FROM applications
 GROUP BY categorie, prix;
 ```
