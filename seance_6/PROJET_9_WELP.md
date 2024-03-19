@@ -19,7 +19,7 @@ Pour ce projet, vous travaillerez avec deux tables :
 2. Examinez les 2 tables et essayez d'en comprendre la structure.
 
 
-3. Si chaque signe de dollar ($) représente 10 $, comment pouvez-vous trouver tous les endroits qui coûtent 20 $ ou moins ?
+3. Si chaque signe de dollar (`$`) représente 10 $, comment pouvez-vous trouver tous les endroits qui coûtent 20 $ ou moins ?
 
 
 4. Quelles colonnes peuvent être utilisées pour JOINDRE ces deux tables ?
