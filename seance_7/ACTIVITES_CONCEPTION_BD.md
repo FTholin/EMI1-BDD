@@ -449,6 +449,7 @@ Parfois, aucune des colonnes d'une table ne peut identifier un enregistrement de
 
 Par exemple, une liste de `livres_populaires` triés par titre de livre peut donner les résultats suivants :
 
+```
     titre_du_livre              | nom_auteur        | nombre_vendu | nombre_prévus 
 --------------------------------+-------------------+--------------+--------------
  Les Secrets de l'Informatique  | Clara Pixel      |          110 |           130
@@ -460,10 +461,12 @@ Par exemple, une liste de `livres_populaires` triés par titre de livre peut don
  Le Guide du Data Scientist     | Léo Struct       |          100 |           115
  Python et la Science des Données| Sophie Lambda   |           95 |           110
  Python et la Science des Données| Émile Code      |           95 |           110
-
+```
 
 Dans l'exemple ci-dessus, le titre du livre `Les Secrets de l'Informatique` est listé deux fois car il a deux auteurs. Si nous listons les livres populaires par nom d'auteur, nous pouvons trouver un auteur apparaissant deux fois, comme dans l'exemple suivant :
 
+
+```
 nom_auteur   |   titre_du_livre            
 -------------+----------------------------
  Clara Pixel | Les Secrets de l'Informatique
@@ -475,7 +478,7 @@ nom_auteur   |   titre_du_livre
  Léo Struct  | Le Guide du Data Scientist
  Sophie Lambda| Le Guide du Data Scientist
  Sophie Lambda| Python et la Science des Données
-
+```
 
 Comme nous le voyons ci-dessus, ni `titre_du_livre` ni `nom_auteur` ne peuvent être une colonne unique. Une clé primaire composite, cependant, peut être dérivée de la combinaison de `titre_du_livre` et `nom_auteur` qui rendrait une ligne unique.
 
