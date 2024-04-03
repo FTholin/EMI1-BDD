@@ -493,7 +493,7 @@ Par exemple, si nous devions désigner à la fois recette_id et ingredient_id co
 ```sql
 CREATE TABLE recettes_populaires (
   recette_id VARCHAR(20),
-  ingredient_id vaVARCHARrchar(20),
+  ingredient_id VARCHAR(20),
   nombre_telechargements INT,
   PRIMARY KEY (recette_id, ingredient_id)
 );
@@ -544,7 +544,7 @@ CREATE TABLE personne (
  
 CREATE TABLE email (
   email VARCHAR(20) PRIMARY KEY,
-  id_personne INT REFERENCES person(id),
+  id_personne INT REFERENCES personne(id),
   stockage INT,
   prix DECIMAL(10, 2)
 );
