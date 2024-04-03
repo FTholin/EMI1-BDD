@@ -75,3 +75,10 @@ INNER JOIN avis_2020 ON lieux.id = avis_2020.id_lieux;
 
 -- 10
 
+SELECT a.nom_utilisateur, COUNT(a.id) AS nb_evaluations_inferieures
+FROM avis a
+JOIN lieux l ON a.id_lieux = l.id
+WHERE a.note < l.note_moyenne
+GROUP BY a.nom_utilisateur
+ORDER BY nb_evaluations_inferieures DESC
+LIMIT 1;
